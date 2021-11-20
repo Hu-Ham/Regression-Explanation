@@ -1,2 +1,63 @@
-<h1>Test test test</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Data Regression</title>
+</head>
+<body onload="load()">
+    <h2>Botanical Data Regression Explained: Hugh Hamilton </h2>
+    <p>We can make sense of a large quantity of data by combining graphical representations of the 
+        data with mathematical measures of the data as a whole. </p>
+    <p>For this assignment, we are examining linear regression applied to a corpus of botanical data to 
+        mark the correlation between the height of plants and four independent variables. </p>
+    <p>The GitHub repository containing this entire website and all source code is linked 
+        <A HREF="https://github.com/Hu-Ham/Regression-Explanation">here</A>. </p>
+    <p>Using results from statistical analysis of this plant data, we will explore the concepts of 
+        scatter plots, a line of best fit, standard error, and R-squared values. 
+    </p>
+    <p>The Jupyter notebook used for all data analysis and visualization has been exported as an HTML
+        document <A HREF="regression_results.html">here</A>, and is embedded below. </p>
+    <iframe src="regression_results.html" width="1000" height="500" title="Regression Results">
+    </iframe>
+    <h3>Scatter Plots:</h3>
+    <p>As seen above, scatter plots are a visually intuitive representation of discrete data,
+        where the dependent variable is plotted on the x-axis, while the independent variable 
+        is plotted on the y-axis.
+    </p>
+    <p>Below is the scatter plot of the correlation between plant height 
+        (in the x-axis) and the plant's altitude (plotted on the y-axis):
+     </p>
+     <img src="altitude.png" alt="Plant height and altitude scatter plot">
 
+     <h3>Line of best fit:</h3>
+     <p>In this case, we calculate a line of best fit through a least-squares polynomial regression 
+         of degree one, which is to say, a single line approximating the trend of the data. 
+     </p>
+     <p>This is equivalent to what 
+         <A HREF="https://en.wikipedia.org/wiki/Simple_linear_regression#Intuition_about_the_slope">
+            Wikipedia calls a "simple linear regression"</A>, which is a line that 
+         has both a height and a slope: they helpfully provide the following formula for the slope:
+     </p>
+     <img src="best_fit_slope.png" alt="Slope of the line of best fit">
+     <p>The y-intercept of this line (its "height") in question is the average y-value of all data, 
+         in order to plot the actual line (if this were to be done by hand).
+     </p>
+
+     <h3>Standard Error and R-Squared values:</h3>
+     <p>The standard error of a set of data, in this context, is an indicator of the data's variance from a 
+         both the line of best fit and from the average y-value of all data. Data that is 
+         scattered and does not correlate clearly along a line of best fit indicates that the dependent 
+         variable does not change significantly with changes in the independent variable. 
+     </p>
+     <p>The R-squared value of a set of data notes how close a line of best fit gets to the data in 
+         general, providing a numerical value for that level of correlation. An r-squared value can be 
+         derived from 1-(standard error of the line/standard error of the average datum).
+     </p>
+     <p>R-squared values vary between zero and one, where one indicates the strongest correlation. In 
+         this case, the highest R-squared value is that representing the relationship between plant height 
+         and rainfall, at a value of approximately 0.14. 
+     </p>
+</body>
+</html>
